@@ -1,0 +1,106 @@
+<apex:page controller="DetailsController" lightningStyleSheets="true" showHeader="false" sidebar="false">
+	<apex:slds />
+    <style>
+        .image {
+            margin: 60px 0px 0 250px;
+            width: 340px;
+        }
+
+        .title {
+            margin: 60px 0px 0 -250px;
+            font-size: 17px;
+        }
+
+        .width {
+            width: 100%;
+        }
+        a.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: default;
+        }
+    </style>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <apex:form >
+            <div class="slds-scope">
+                <apex:pageBlock >
+                    <div class="slds-align_absolute-center" style="height: 5rem;font-size: 25px">
+                        <b>{!product.Name}</b>
+                    </div>
+                </apex:pageBlock>
+                <div class="slds-p-bottom_large" id="alert">
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                        <span class="slds-assistive-text">warning</span>
+                        <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Warning">
+                            <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                <use xlink:href="{!URLFOR($Asset.SLDS, "assets/icons/utility-sprite/svg/symbols.svg#warning")}"></use>
+                            </svg>
+                        </span>
+                        <h2 id="alertDescription"></h2>
+                    </div>
+                </div>
+                <div class="slds-grid slds-gutters width">
+                    <div class="slds-col slds-size_2-of-3 ">
+                        <apex:outputPanel rendered="{!product.Image_Url__c != null}">
+                            <apex:image value="{!product.Image_Url__c}" styleClass="image"
+                            alt="{!product.Image_Url__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!product.Image_Url__c == null}">
+                            <apex:image url="{!$Resource.attachment}" styleClass="image" style="height: 400px" />
+                        </apex:outputPanel>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3 title">
+                        <b>AMOUNT: </b>
+                        <br/>
+                        <apex:outputText value="{0, Number, Currency}">
+                    		<apex:param value="{!product.Unit_Price__c}" />
+                    	</apex:outputText>
+                        <br/><br/>
+
+                        <b>COUNT: </b>
+                        <br/>
+                        <apex:outputText value="{!product.Units_Available__c}"/>
+                        <br/><br/>
+
+                        <b>TITLE:</b><br/>
+                        <apex:outputText value="{!product.Name}"/>
+                        <br/><br/>
+                        <b>DESCRIPTION:</b>
+                        <br/>
+                        <apex:outputText value="{!product.Product_Description__c}"/>
+                    </div>
+                </div>
+                <div style="height: 180px;">
+                    <div class="slds-docked-form-footer">
+                        <apex:outputLink value="/apex/productsTable?id={!product.Warehouse__c}"
+                            styleClass="slds-button slds-button_neutral" target="_blank">
+                            <apex:outputText >
+                                To Shopping
+                            </apex:outputText>
+                        </apex:outputLink>
+                        <a href="/apex/PurchasePage?id={!productId}" class="slds-button slds-button_brand"  target="_blank"
+                            id="purchaseBtn">
+                            Buy
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <apex:includeScript value="{!$Resource.JqueryMin}"/>
+        </apex:form>
+    </html>
+
+    <script>
+        $j = jQuery.noConflict();
+        $j("#alert")[0].hidden = true;
+
+        $j(document).ready(function() {
+            $j("#alert")[0].hidden = true;
+            var unitsAvailable = '{!product.Units_Available__c}';
+            if (unitsAvailable == 0) {
+                $j("#alert")[0].hidden = false;
+                $j("#alertDescription")[0].innerText = 'The product not in stock right now.'; 
+                $j("#purchaseBtn").addClass('disabled');
+            };
+        });
+    </script>
+</apex:page>

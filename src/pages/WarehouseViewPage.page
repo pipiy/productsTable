@@ -1,0 +1,65 @@
+<apex:page controller="WarehouseController" lightningStyleSheets="true" showHeader="false" sidebar="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <style>
+            table {
+                border-left: 1px solid rgb(221, 219, 218);
+                border-right: 1px solid rgb(221, 219, 218);
+            }
+        </style>
+        <apex:slds />
+        <div class="slds-scope">
+            <div class="slds-p-around_xx-large">
+                <apex:pageBlock >
+                    <div class="slds-page-header slds-m-bottom_large">
+                        <div class="slds-page-header__row">
+                            <div class="slds-page-header__col-title">
+                                <div class="slds-media">
+                                    <div class="slds-media__figure">
+                                        <span class="slds-icon_container slds-icon-custom-custom20">
+                                            <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                                <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/custom-sprite/svg/symbols.svg#custom20')}"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">custom20</span>
+                                        </span>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="slds-page-header__name">
+                                            <div class="slds-page-header__name-title">
+                                                <h1>
+                                                    <span class="slds-page-header__title slds-truncate" title="Warehouses">
+                                                        Warehouses
+                                                    </span>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        <p class="slds-page-header__name-meta">
+                                            {!warehouses.size} {!IF(warehouses.size = 1, 'item','items')}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <apex:variable var="index" value="{!0}"/>
+                    <apex:pageBlockTable value="{!warehouses}" var="item"
+                        styleClass="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                        style="font-size:15px">
+                        <div class="slds-grid">
+                            <apex:column styleClass="slds-col slds-size_1-of-12">
+                                <apex:variable var="index" value="{!index + 1}" />
+                                {!index}
+                            </apex:column>
+                            <apex:column headerValue="WAREHOUSE NAME" styleClass="slds-col">
+                                <div class="">
+                                    <apex:outputLink value="apex/productsTable?id={!item.Id}" target="_blank">
+                                        {!item.Name}
+                                    </apex:outputLink>
+                                </div>
+                            </apex:column>
+                        </div>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </div>
+        </div>
+    </html>
+</apex:page>

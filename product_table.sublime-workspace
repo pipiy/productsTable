@@ -1,0 +1,627 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Mat",
+				"matcher"
+			],
+			[
+				"set",
+				"PUBLIC setRedirect(Boolean redirect) \tSystem.PageReference"
+			],
+			[
+				"page",
+				"apex:pageMessages"
+			],
+			[
+				"re",
+				"reRender\t(Object)"
+			],
+			[
+				"get",
+				"PUBLIC getNumDml() \tInteger"
+			],
+			[
+				"out",
+				"apex:outputPanel"
+			],
+			[
+				"com",
+				"apex:commandButton"
+			],
+			[
+				"wrapper",
+				"WrapperWeather"
+			],
+			[
+				"getS",
+				"PUBLIC getStatusCode() \tInteger"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"response",
+				"responseMap"
+			],
+			[
+				"ges",
+				"PUBLIC getStatusCode() \tInteger"
+			],
+			[
+				"Htt",
+				"HttpResponse\t[Standard Apex Class]"
+			],
+			[
+				"Ht",
+				"HttpRequest\t[Standard Apex Class]"
+			],
+			[
+				"H",
+				"HttpRequest\t[Standard Apex Class]"
+			],
+			[
+				"Ine",
+				"Integer\t[Standard Apex Class]"
+			],
+			[
+				"lead",
+				"leadCreatedDateYear"
+			],
+			[
+				"C",
+				"CALENDAR_MONTH"
+			],
+			[
+				"new",
+				"newLead"
+			],
+			[
+				"Cam",
+				"Campaign"
+			],
+			[
+				"assert",
+				"assertEquals()"
+			],
+			[
+				"st",
+				"PUBLIC stopTest() \tvoid"
+			],
+			[
+				"le",
+				"leadsList"
+			],
+			[
+				"Lead",
+				"LeadSource"
+			],
+			[
+				"face",
+				"facebook"
+			],
+			[
+				"Id",
+				"LeadId"
+			],
+			[
+				"ass",
+				"assertEquals()"
+			],
+			[
+				"faceb",
+				"facebook"
+			],
+			[
+				"twit",
+				"twitterChild"
+			],
+			[
+				"insta",
+				"instagramChild"
+			],
+			[
+				"in",
+				"instagram"
+			],
+			[
+				"CA",
+				"Campaign"
+			],
+			[
+				"Date",
+				"Datetime\t[Standard Apex Class]"
+			],
+			[
+				"Fac",
+				"Facebook_5_2019"
+			],
+			[
+				"Ca",
+				"Campaign"
+			],
+			[
+				"listOf",
+				"listOfSkills"
+			],
+			[
+				"student",
+				"studentsId"
+			],
+			[
+				"studen",
+				"studentSkills"
+			],
+			[
+				"li",
+				"listOfSkills"
+			],
+			[
+				"S",
+				"SELECT"
+			],
+			[
+				"St",
+				"Student__r"
+			],
+			[
+				"is",
+				"isUpdate"
+			],
+			[
+				"update",
+				"updateTasks"
+			],
+			[
+				"acc",
+				"accountTasks"
+			],
+			[
+				"account",
+				"accountSAN"
+			],
+			[
+				"l",
+				"listTasks"
+			],
+			[
+				"list",
+				"listUsers"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/classes/WarehouseController.cls",
+			"settings":
+			{
+				"buffer_size": 239,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/ProductTableController.cls",
+			"settings":
+			{
+				"buffer_size": 829,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/pages/productsTable.page",
+			"settings":
+			{
+				"buffer_size": 4968,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/pages/DetailPage.page",
+			"settings":
+			{
+				"buffer_size": 2548,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/pages/WarehouseViewPage.page",
+			"settings":
+			{
+				"buffer_size": 3752,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/product_table",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/product_table/src",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/product_table/src/classes",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/product_table/src/pages"
+	],
+	"file_history":
+	[
+		"/C/Users/aslabodnik/Desktop/JsonFiles/exRatesJson2Apex.apxc",
+		"/C/Users/aslabodnik/Desktop/xCurrencies.xml",
+		"/C/Users/aslabodnik/Desktop/exchangeRates.xml",
+		"/C/Users/aslabodnik/Desktop/ExRates.xml",
+		"/C/Users/aslabodnik/Desktop/currencyExchange.txt",
+		"/C/Users/aslabodnik/Desktop/currencyExchange.xml.txt",
+		"/C/Users/aslabodnik/Downloads/JSON2Apex.apxc",
+		"/C/Users/aslabodnik/Downloads/JSON2Apex_Test.apxc",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/weather app/src/classes/WrapperWeather.cls",
+		"/C/Users/aslabodnik/Downloads/city.list.json",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/LeadToCampaignMemberClassTest.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/triggers/CampaignTrigger.trigger",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/RenameCampaignClassTest.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/LeadToCampaignMember.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/NewCampaignClass.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/package.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/LeadToCampaignMemberClassTest.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/LeadToCampaignMemberClassTest.apxc",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Trigger-task/src/classes/LeadToCampaignMemberClassTes.cls",
+		"/C/Users/aslabodnik/Downloads/jquery-3.4.0.js",
+		"/C/Users/aslabodnik/Downloads/jquery-3.4.0.min.map",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/tabs/Student__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/tabs/Student__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/tabs/Skill__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/tabs/Skill__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/tabs/Preferences__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/tabs/Preferences__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/tabs/Discipline__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/tabs/Discipline__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/classes/CourseAssignment.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/package.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/tabs/Course__c.tab",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/package.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/classes/CourseAssignment.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/objects/Discipline__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Discipline__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/classes/CourseAssignment.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Preferences__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/objects/Preferences__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/objects/Student__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Student__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/objects/Skill__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Skill__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Course__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/objects/Course__c.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/Task-2/src/objects/Course__c.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/learning-center-exam-2/src/classes/CourseAssignment.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/TasksAssignmentClass.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/triggers/CreatingTaskTrigger.trigger",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/TasksAssignmentClassTest.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/AssignmentClass.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/TestClass.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/AssignmentClass.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/package.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/classes/TasksAssignmentClassTest.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/package.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/objects/User.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/task-1/src/objects/Account.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/objects/User.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/classes/TasksAssignmentClassTest.cls",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/objects/Account.object",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/classes/TasksAssignmentClassTest.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/classes/AssignmentClass.cls-meta.xml",
+		"/C/Users/aslabodnik/Desktop/vrpConLessons/development/learning-center-exam-1/src/classes/AssignmentClass.cls"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/classes/WarehouseController.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/classes/ProductTableController.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/pages/productsTable.page",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4968,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Visualforce.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/pages/DetailPage.page",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Visualforce.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/pages/WarehouseViewPage.page",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3752,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Visualforce.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 637.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "product_table.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 322.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

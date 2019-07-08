@@ -1,0 +1,156 @@
+<apex:page controller="PurchaseController" lightningStyleSheets="true" showHeader="false" sidebar="false" docType="HTML-5.0">
+	<apex:slds />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <apex:form id="form">
+            <apex:pageMessages />
+            <apex:pageBlock >
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_4-of-4 slds-align_absolute-center" style="height: 5rem;font-size: 25px">
+                        <apex:outputText value="{!purchPage.Name}"/>
+                    </div>
+                </div>
+            </apex:pageBlock>
+
+            <div class="slds-p-bottom_large" id="alert">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                    <span class="slds-assistive-text">warning</span>
+                    <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Warning">
+                        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                            <use xlink:href="{!URLFOR($Asset.SLDS, "assets/icons/utility-sprite/svg/symbols.svg#warning")}"></use>
+                        </svg>
+                    </span>
+                    <h2 id="alertDescription"></h2>
+                </div>
+            </div>
+
+            <div class="slds-p-horizontal_xx-large">
+                <div class="slds-media slds-media--responsive slds-media--center slds-p-horizontal_xx-large" style="font-size: 1rem;">
+                    <div class="slds-media__figure">
+                        <apex:outputPanel rendered="{!purchPage.Image_Url__c != null}">
+                            <apex:image value="{!purchPage.Image_Url__c}" style="height:250px; width:160px;" />
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!purchPage.Image_Url__c == null}">
+                            <apex:image url="{!$Resource.attachment}" style="height:250px; width:160px;" />
+                        </apex:outputPanel>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1>
+                            <apex:outputText value="{0, Number, Currency}">
+                                <apex:param value="{!purchPage.Unit_Price__c}" />
+                            </apex:outputText>
+                            <span class="slds-badge">Price</span>
+                        </h1>
+                        <h1>
+                            <apex:outputText value="{!purchPage.Units_Available__c}"/>
+                            <span class="slds-badge">Units Available</span>
+                        </h1>
+                        <p>{!purchPage.Product_Description__c}</p>
+                        <p>
+                            <div class="slds-form-element slds-size_1-of-4">
+                                <label class="slds-form-element__label">
+                                    Unit Count <abbr class="slds-required" title="required">* </abbr>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:input type="number" value="{!getUnitsAvailable}"
+                                        styleClass="slds-input slds-size_2-of-4 unitCount" onKeyUp="checkIfAvailable()"
+                                        onChange="checkIfAvailable()" required="true"/>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div id="totalAmount" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-p-vertical_large">
+                <apex:pageBlock >
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_4-of-4 slds-align_absolute-center" style="height: 5rem;font-size: 25px">
+                            <apex:outputText value="Contact Information"/>
+                        </div>
+                    </div>
+                </apex:pageBlock>
+            </div>
+            <div class="slds-p-horizontal_xx-large slds-p-bottom_xx-large slds-size_4-of-12">
+                <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address" style="font-size: 14px">
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-1">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label">Email</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText value="{!getEmail}" styleClass="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_3-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label">First Name</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText value="{!getFirstName}" styleClass="slds-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-size_3-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label">
+                                        Last Name <abbr class="slds-required" title="required">* </abbr>
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText value="{!getLastName}" styleClass="slds-input" required="true"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="slds-align--absolute-center slds-box_border" style="background-color: #f8f8f8; height: 80px;">
+                <apex:outputLink value="/apex/productsTable?id={!purchPage.Warehouse__c}"
+                    styleClass="slds-button slds-button_neutral" target="_blank">
+                    <apex:outputText >
+                        To Shopping
+                    </apex:outputText>
+                </apex:outputLink>
+                <apex:commandButton action="{!makePurchase}" value="Buy" styleClass="slds-button slds-button_brand" />
+            </div>
+
+            <apex:includeScript value="{!$Resource.JqueryMin}"/>
+        </apex:form>
+        <script>
+            $j = jQuery.noConflict();
+        
+            $j("#alert")[0].hidden = true;
+
+            $j('#totalAmount').innerHTML = '$' + 0;
+            function checkIfAvailable() {
+                var unitsAvailable = {!purchPage.Units_Available__c};
+                var price = {!purchPage.Unit_Price__c};
+                var enterCount = $j('.unitCount')[0].value;
+                if (enterCount > unitsAvailable) {
+                    $j("#alert")[0].hidden = false;
+                    $j("#alertDescription")[0].innerText = 'The quantity of the goods you entered, exceeds the goods in stock!'; 
+                    $j('.unitCount')[0].value = '';
+                    $j('#totalAmount')[0].innerHTML = '$' + 0;
+                    setTimeout(function(){
+                        $j("#alert")[0].hidden = true;
+                    }, 10000);
+                } else if (enterCount <= 0) {
+                    $j("#alert")[0].hidden = false;
+                    $j("#alertDescription")[0].innerText = 'Unit Count can not be empty or equal zero!'; 
+                    setTimeout(function(){
+                        $j("#alert")[0].hidden = true;
+                    }, 10000);
+                    $j('.unitCount')[0].value = '';
+                } 
+                else {
+                    var totalAmount = enterCount * price;
+                    $j('#totalAmount')[0].innerHTML = '$' + totalAmount;
+                }
+            }
+        </script>
+    </html>
+</apex:page>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>DetailsController</members>
+        <members>DetailsControllerTest</members>
+        <members>ProductTableController</members>
+        <members>ProductTableControllerTest</members>
+        <members>PurchaseController</members>
+        <members>PurchaseControllerTest</members>
+        <members>WarehouseController</members>
+        <members>WarehouseControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>DetailPage</members>
+        <members>PurchasePage</members>
+        <members>WarehouseViewPage</members>
+        <members>productsTable</members>
+        <name>ApexPage</name>
+    </types>
+    <version>45.0</version>
+</Package>

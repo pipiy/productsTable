@@ -1,0 +1,92 @@
+<apex:page controller="ProductTableController" lightningStyleSheets="true" showHeader="false" sidebar="false">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+		<style>
+            table {
+                border-left: 1px solid rgb(221, 219, 218);
+                border-right: 1px solid rgb(221, 219, 218);
+            }
+            .imgWidth {
+    			width: 60%;
+	        }
+        </style>
+		<apex:slds />
+		<div class="slds-scope">
+			<div class="slds-p-around_xx-large">
+				<apex:pageBlock >
+					<div class="slds-page-header slds-m-bottom_large">
+		                <div class="slds-page-header__row">
+		                    <div class="slds-page-header__col-title">
+		                        <div class="slds-media">
+		                            <div class="slds-media__figure">
+		                                <span class="slds-icon_container slds-icon-custom-custom20">
+		                                    <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+		                                        <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/custom-sprite/svg/symbols.svg#custom20')}"></use>
+		                                    </svg>
+		                                    <span class="slds-assistive-text">custom20</span>
+		                                </span>
+		                            </div>
+		                            <div class="slds-media__body">
+		                                <div class="slds-page-header__name">
+		                                    <div class="slds-page-header__name-title">
+		                                        <h1>
+													<span title="Warehouse">Warehouse</span>
+													<span class="slds-page-header__title slds-truncate" title="Recently Viewed">
+														{!warehouseName}
+													</span>
+												</h1>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <apex:pageBlockTable value="{!products}" var="product"
+		            	styleClass="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered "
+		            	style="font-size:15px">
+		            	<div class="slds-grid">
+			                <apex:column headerValue="IMAGE" styleClass="slds-col slds-size_2-of-12 slds-truncate">
+				                <apex:outputPanel rendered="{!product.Image_Url__c != null}" >
+				                	<apex:image id="theImage" value="{!product.Image_Url__c}" styleClass="imgWidth"
+	                            	alt="{!product.Image_Url__c}"/>
+								</apex:outputPanel>
+								<apex:outputPanel rendered="{!product.Image_Url__c == null}">
+				                	<apex:image url="{!$Resource.attachment}" styleClass="imgWidth" />
+								</apex:outputPanel>
+			                </apex:column>
+			                <apex:column headerValue="TITLE" styleClass="slds-col slds-size_3-of-12 slds-p-right_medium slds-truncate">
+			                	<apex:outputLink value="/apex/DetailPage?id={!product.id}" target="_blank">
+			                        <apex:outputText >
+		                                {!product.Name}
+			                        </apex:outputText>
+			                    </apex:outputLink>
+	            			</apex:column>
+			                <apex:column headerValue="DESCRIPTION" styleClass="slds-col slds-size_4-of-12 slds-p-right_medium slds-truncate">
+			                    <apex:outputText value="{!left(product.Product_Description__c,100)}"/>
+			                    <apex:outputPanel rendered="{!LEN(product.Product_Description__c) > 100}">
+	                            	<apex:outputText >...</apex:outputText>
+	        						<apex:outputLink value="/apex/DetailPage?id={!product.Id}" target="_blank">
+	                					More
+	                				</apex:outputLink>
+	                			</apex:outputPanel>
+			                </apex:column>
+			                <apex:column headerValue="COST" styleClass="slds-col slds-size_2-of-12 slds-truncate">
+			                    <apex:outputText value="{0, Number, Currency}">
+	                    			<apex:param value="{!product.Unit_Price__c}" />
+	                        	</apex:outputText>
+			                </apex:column>
+			                <apex:column styleClass="slds-col slds-size_2-of-12 slds-truncate slds-truncate">
+			                    <apex:outputLink value="/apex/PurchasePage?id={!product.id}"
+			                    	styleClass="slds-button slds-button_brand slds-m-left_x-large" target="_blank">
+			                        <apex:outputText >
+			                            Buy
+			                        </apex:outputText>
+			                    </apex:outputLink>
+			                </apex:column>
+			            </div>
+		            </apex:pageBlockTable>
+		        </apex:pageBlock>
+		    </div>
+		</div>
+    </html>
+</apex:page>

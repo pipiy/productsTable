@@ -1,0 +1,17 @@
+{
+    "projectName": "product_table",
+    "username": "aslabodnikvrp@gmail.com",
+    "id": "505ca780-9753-11e9-9e73-ed7c0cf86e23",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://ap8.salesforce.com",
+    "workspace": "C:\\Users\\aslabodnik\\Desktop\\vrpConLessons\\development",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}
